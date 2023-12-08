@@ -47,7 +47,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          conda install --progress-bar off torch torchvision torchaudio
+          pip install --progress-bar off torch torchvision torchaudio
           pip install -r dev-requirements.txt
           python -c 'import torch; print("Torch version:", torch.__version__)'
       - name: Type check all files
