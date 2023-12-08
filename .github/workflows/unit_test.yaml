@@ -29,8 +29,9 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: Install dependencies
         run: |
-          conda install pytorch torchvision cpuonly
+          conda install --progress-bar off torch torchvision torchaudio
           pip install -r dev-requirements.txt
+          python -c 'import torch; print("Torch version:", torch.__version__)'
       - name: Run unit tests with coverage
         run: pytest tests --cov=. --cov-report=xml --durations=20 -vv
       - name: Upload Coverage to Codecov
