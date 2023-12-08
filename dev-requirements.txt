@@ -10,7 +10,3 @@ pytest-cov
 pytest-mock==3.8.2
 ufmt==2.0.1
 usort==1.0.5
-torch
-torchvision
-numpy
-tqdm
