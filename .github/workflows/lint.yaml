@@ -51,7 +51,7 @@ jobs:
           pip install -r dev-requirements.txt
           python -c 'import torch; print("Torch version:", torch.__version__)'
       - name: Type check all files
-        
+
         run: |
           mkdir .mypy_cache
           python -m mypy --install-types --non-interactive --config-file mypy.ini
